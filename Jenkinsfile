@@ -23,6 +23,7 @@ pipeline {
             steps {
                 script {
                     // Deploy WAR file to Tomcat using SCP or another method
+                  sshagent(['c48d6548-095c-42d2-a6e2-05b31f4ae898'])
                     sh """
                     scp -o StrictHostKeyChecking=no target/vprofile-v2.war ubuntu@172.31.13.158:/opt/tomcat/webapps
                     """
