@@ -24,7 +24,7 @@ pipeline {
                 script {
                     // Deploy WAR file to Tomcat using SCP or another method
                     sh """
-                    scp target/vprofile-v2.war ubuntu@172.31.13.158:/opt/tomcat/webapps
+                    scp -o StrictHostKeyChecking=no target/vprofile-v2.war ubuntu@172.31.13.158:/opt/tomcat/webapps
                     """
                 }
             }
