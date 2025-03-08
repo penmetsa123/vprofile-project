@@ -43,7 +43,7 @@ pipeline {
             steps {
                 script {
                     // Restart Tomcat after deploying the WAR file
-                    sshagent(['my-ssh-key']) {  // Replace 'my-ssh-key' with the actual credentials ID
+                    sshagent(['c48d6548-095c-42d2-a6e2-05b31f4ae898']) {  // Replace 'my-ssh-key' with the actual credentials ID
                         sh """
                         ssh ${TOMCAT_USER}@${TOMCAT_HOST} 'sudo systemctl restart tomcat'
                         """
