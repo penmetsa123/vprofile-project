@@ -29,7 +29,7 @@ pipeline {
             steps {
                 script {
                     // Using the sshagent to inject the SSH private key stored in Jenkins credentials
-                    sshagent(['my-ssh-key']) {  // Replace 'my-ssh-key' with the actual credentials ID
+                    sshagent(['c48d6548-095c-42d2-a6e2-05b31f4ae898']) {  // Replace 'my-ssh-key' with the actual credentials ID
                         // SCP the WAR file to the Tomcat server
                         sh """
                         scp ${WAR_FILE} ${TOMCAT_USER}@${TOMCAT_HOST}:${TOMCAT_WEBAPPS_DIR}
