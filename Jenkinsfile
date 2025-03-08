@@ -19,5 +19,15 @@ pipeline {
                 sh "${tool 'MAVEN'}/bin/mvn clean package"
             }
         }
+         stage('Deploy to Tomcat') {
+            steps {
+                script {
+                    // Deploy WAR file to Tomcat using SCP or another method
+                    sh """
+                    scp target/vprofile-v2.war ubuntu@172.31.13.158:/opt/tomcat/webapps
+                    """
+                }
+            }
+        }
     }
 }
