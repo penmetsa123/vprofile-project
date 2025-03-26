@@ -1,5 +1,5 @@
 pipeline {
-    agent Node1
+    agent node1
     tools {
         maven 'MAVEN'  // Ensure Maven is correctly configured in Jenkins
     }
