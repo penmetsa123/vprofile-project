@@ -7,7 +7,10 @@
     <version>v2</version>
     <name>Visualpathit VProfile Webapp</name>
     <url>http://maven.apache.org</url>
+    
     <properties>
+	<sonar.host.url>http://3.111.150.191:9000</sonar.host.url>
+        <sonar.login>sqa_ae2ef20d69f77a436af1cc3a3aa0ed7287f20f1c</sonar.login>
         <spring.version>4.2.0.RELEASE</spring.version>
         <spring-security.version>4.0.2.RELEASE</spring-security.version>
         <spring-data-jpa.version>1.8.2.RELEASE</spring-data-jpa.version>
