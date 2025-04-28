@@ -1,7 +1,7 @@
 pipeline {
-    agent { label 'node1' }
+    agent any
     tools {
-        maven 'MAVEN'  // Ensure Maven is correctly configured in Jenkins
+        maven 'maven'  // Ensure Maven is correctly configured in Jenkins
     }
     stages {
         stage('Get the Git Code') {
