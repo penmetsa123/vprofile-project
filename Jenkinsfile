@@ -19,6 +19,13 @@ pipeline {
                sh 'mvn sonar:sonar'
             }
         }
+        stage('Deploy to tomcat') {
+            steps {
+               sshagent(['tomcat']) {
+    sh "scp -o StrictHostKeyChecking=no target/*.war ubuntu@13.203.208.170:/opt/tomcat/webapps/"
+                    
+            }
+        }
     }
 }
 
