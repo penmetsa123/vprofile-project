@@ -9,11 +9,11 @@ pipeline {
                 git branch: 'main', url: 'https://github.com/penmetsa123/vprofile-project.git'
             }
         }
-        stage('build') {
+         stage('build') {
             steps {
                sh 'mvn package'
             }
-         stage('build') {
+         stage('Quality test') {
             steps {
                sh 'mvn sonar:sonar'
             }
