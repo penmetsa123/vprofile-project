@@ -13,6 +13,7 @@ pipeline {
             steps {
                sh 'mvn package'
             }
+         }
          stage('Quality test') {
             steps {
                sh 'mvn sonar:sonar'
