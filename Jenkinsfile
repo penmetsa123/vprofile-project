@@ -1,5 +1,6 @@
 pipeline{
     agent any
+    properties([parameters([choice(choices: ['main ', 'stg', 'prod'], name: 'branches')])])
     tools{
         maven "maven"
     }//tools closing
