@@ -1,9 +1,9 @@
+properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '', numToKeepStr: '3')), pipelineTriggers([cron('* * * * *')])])
 pipeline{
     agent any
     tools{
         maven "maven"
-    }
-    properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '', numToKeepStr: '3')), pipelineTriggers([cron('* * * * *')])])//tools closing
+    }//tools closing
     stages{
         stage("Getting code from git"){
             steps{
