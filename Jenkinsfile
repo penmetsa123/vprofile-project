@@ -8,7 +8,7 @@ pipeline{
     stages{
         stage("Getting code from git"){
             steps{
-                git branch: "${branches}", url: 'https://github.com/penmetsa123/vprofile-project.git'
+                git branch: "main", url: 'https://github.com/penmetsa123/vprofile-project.git'
             }
         }
         stage("packaging the code"){
