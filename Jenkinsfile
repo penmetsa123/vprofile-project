@@ -4,6 +4,7 @@ pipeline{
     tools{
         maven "maven"
     }//tools closing
+    properties([parameters([choice(choices: ['main ', 'stg', 'prod'], name: 'branches')])])
     stages{
         stage("Getting code from git"){
             steps{
