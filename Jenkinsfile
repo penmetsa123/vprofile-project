@@ -1,4 +1,5 @@
 properties([parameters([choice(choices: ['main ', 'stg', 'prod'], name: 'branches')])])
+properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '', numToKeepStr: '3')), pipelineTriggers([cron('* * * * *')])])
 pipeline{
     agent any
     tools{
